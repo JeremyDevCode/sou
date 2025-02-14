@@ -32,12 +32,6 @@ export default function Home() {
     return "#F9EFE9";
   };
 
-  const getStatusImage = () => {
-    if (accepted) return "/yes.gif";
-    if (tooManyNo) return "/no.gif";
-    return "/question.gif";
-  };
-
   console.log(tooManyNo);
   return (
     <div
@@ -66,8 +60,9 @@ export default function Home() {
             </button>
           </div>
         )}
-
-        <img src={getStatusImage()} />
+        {accepted && <img src="/yes.gif" />}
+        {tooManyNo && <img src="/no.gif" />}
+        {!accepted && !tooManyNo && <img src="/question.gif" />}
       </main>
     </div>
   );
