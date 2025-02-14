@@ -33,11 +33,9 @@ export default function Home() {
   };
 
   const getStatusImage = () => {
-    if (accepted)
-      return "https://media1.tenor.com/m/DDRz38sfMSIAAAAd/milk-mocha-bear.gif";
-    if (tooManyNo)
-      return "https://media1.tenor.com/m/umwFdDPwCJAAAAAd/i-have-been-bullied-a-lot-how-could-you-do-this-to-me.gif";
-    return "https://images-ext-1.discordapp.net/external/tKi9YcGW7wejplEquIWkMptg0zTwAW5eAmYCyGmWBTk/https/media.tenor.com/tAtFFcpDDgQAAAPo/milk-and-mocha-milk-mocha-bear.mp4";
+    if (accepted) return "/yes.gif";
+    if (tooManyNo) return "/no.gif";
+    return "/question.gif";
   };
 
   console.log(tooManyNo);
