@@ -47,7 +47,7 @@ export default function Home() {
       style={{ backgroundColor: getBackgroundColor() }}
     >
       <main className="flex flex-col gap-12 justify-center items-center font-bold text-3xl">
-        <h3 className="text-black">{getText()}</h3>
+        <h3 className="text-black text-center">{getText()}</h3>
         {!accepted && !tooManyNo && (
           <div className="flex justify-between w-full">
             <button
